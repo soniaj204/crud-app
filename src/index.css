@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  min-height: 70px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 2px solid lightgray;
+  font-size: 17px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.form button {
+  width: 100%;
+  background: green;
+  color: #ffffff;
+  margin: 0;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.post {
+  margin: 20px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
