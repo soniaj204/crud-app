@@ -11,7 +11,8 @@ class FormPost extends Component {
     const data = {
       id: new Date(),
       title,
-      description
+      description,
+      editing: false
     }
     this.props.dispatch({
       type: 'ADD_POST',

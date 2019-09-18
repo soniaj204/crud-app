@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Post from "./Post";
+import Edit from "../Edit/Edit";
 
 class Posts extends Component {
   state = {};
@@ -8,13 +9,21 @@ class Posts extends Component {
     return (
       <div className="posts">
         <h1>All Posts</h1>
-        {this.props.posts.map((post) => <Post key={post.id} post={post} /> )}
+        {this.props.posts.map(post => (
+          <div key={post.id}>
+            {post.editing ? (
+              <Edit key={post.id} post={post} />
+            ) : (
+              <Post key={post.id} post={post} />
+            )}
+          </div>
+        ))}
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     posts: state
   };
